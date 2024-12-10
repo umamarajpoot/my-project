@@ -16,7 +16,7 @@ const Shop = () => {
       {/* Header Section */}
       <div
         className="relative bg-cover bg-center h-60"
-        style={{ backgroundImage: "url('/path-to-header-image.jpg')" }}
+        style={{ backgroundImage: "url('background.png')" }}
       >
         <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
           <h1 className="text-white text-4xl font-bold">Our Shop</h1>
@@ -66,10 +66,10 @@ const Shop = () => {
                 {products.map((product, idx) => (
                   <li key={idx} className="flex space-x-4">
                     <Image
-                      src="/sllice.png "// Dynamic image path
+                      src="/sllice.png "
                       alt="product.name"
                       width={64}
-                      height={64} // Added width and height
+                      height={64} 
                       className="w-16 h-16 object-cover"
                     />
                     <div>
@@ -113,7 +113,7 @@ const Shop = () => {
                   className="bg-white shadow rounded-lg overflow-hidden"
                 >
                   <Image
-                    src={product.image} // Dynamic image path
+                    src={product.image} 
                     alt={product.name}
                     width={300}
                     height={192}
