@@ -53,7 +53,7 @@ const Shop = () => {
               </ul>
             </div>
 
-            {/* Filter by Price */}
+            {/* filter by Price */}
             <div className="mb-6">
               <h2 className="text-xl font-semibold mb-4">Filter by Price</h2>
               <input type="range" min="0" max="100" className="w-full" />
