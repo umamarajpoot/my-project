@@ -8,7 +8,6 @@ const AboutUsPage = () => {
       {/* Header Section */}
       <header className="relative bg-gray-900 h-64 flex items-center justify-center">
         <h1 className="text-white text-4xl font-bold z-10">About Us</h1>
-        <p className="text-gray-300 mt-2 z-10">Home / About</p>
         <div className="absolute top-0 left-0 w-full h-full">
           <img
             src="background.png"

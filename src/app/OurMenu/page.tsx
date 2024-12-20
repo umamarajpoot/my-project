@@ -14,16 +14,6 @@ const Menu: React.FC = () => {
       <div className="absolute inset-0 flex flex-col items-center justify-center bg-black bg-opacity-50">
         {/* Title */}
         <h1 className="text-white text-4xl font-bold">Our Menu</h1>
-        {/* Breadcrumb */}
-        <nav className="text-white text-sm mt-2">
-          <a href="#" className="hover:underline">
-            Home
-          </a>{" "}
-          &gt;{" "}
-          <a href="#" className="hover:underline">
-            Menu
-          </a>
-        </nav>
       </div>
     </header>
     <section>
