@@ -17,7 +17,7 @@ const Shop = () => {
     <div className="bg-gray-50 min-h-screen">
       {/* Header Section */}
       <div className="relative bg-black text-white text-center py-16">
-        <h1 className="text-4xl font-bold">Our Shop</h1>
+        <h1 className="text-2xl md:text-4xl font-bold">Our Shop</h1>
         <div
           className="absolute top-0 left-0 w-full h-full bg-cover bg-center opacity-30"
           style={{ backgroundImage: "url('background.png')" }}
@@ -25,7 +25,7 @@ const Shop = () => {
       </div>
 
       {/* Main Content */}
-      <div className="container mx-auto py-10 grid grid-cols-4 gap-6">
+      <div className="container mx-auto py-10 grid grid-cols-1 lg:grid-cols-4 gap-6">
         {/* Sidebar */}
         <div className="col-span-1 bg-white p-6 shadow">
           <div className="mb-6">
@@ -42,7 +42,7 @@ const Shop = () => {
             </div>
           </div>
           <div className="mb-6">
-            <h2 className="text-black-xl font-semibold mb-2">Category</h2>
+            <h2 className="text-xl font-semibold mb-2 text-black">Category</h2>
             <ul>
               {["Sandwiches", "Burger", "Pizza", "Chicken Chop", "Drinks"].map(
                 (category) => (
@@ -55,11 +55,11 @@ const Shop = () => {
             </ul>
           </div>
           <div className="mb-6">
-            <h2 className="text-black-xl font-semibold mb-2">Filter by Price</h2>
+            <h2 className="text-xl font-semibold mb-2 text-black">Filter by Price</h2>
             <input type="range" min="0" max="100" className="w-full" />
           </div>
           <div>
-            <h2 className="text-black font-semibold mb-2">Latest Products</h2>
+            <h2 className="text-xl font-semibold mb-2 text-black">Latest Products</h2>
             <ul>
               {["Product Name", "Product Name", "Product Name"].map(
                 (product) => (
@@ -69,6 +69,7 @@ const Shop = () => {
                       alt="Product"
                       className="w-10 h-10 mr-2"
                     />
+                    <span>{product}</span>
                   </li>
                 )
               )}
@@ -79,8 +80,8 @@ const Shop = () => {
         {/* Product Grid */}
         <div className="col-span-3">
           {/* Filters */}
-          <div className="flex text-black justify-between items-center mb-6">
-            <div className="flex space-x-4">
+          <div className="flex flex-wrap text-black justify-between items-center mb-6">
+            <div className="flex flex-wrap space-x-4">
               <div>
                 <label htmlFor="sort" className="text-black mr-2 font-medium">
                   Sort By:
@@ -111,13 +112,13 @@ const Shop = () => {
           </div>
 
           {/* Dynamic Product Cards */}
-          <div className="grid grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
             {products.map((product) => (
               <div key={product.id} className="bg-white text-black shadow p-4">
                 <img
                   src={`/images/${product.image}`}
                   alt={product.name}
-                  className="w-full h-56 object-cover mb-4 " // Increased height
+                  className="w-full h-56 object-cover mb-4"
                 />
                 <h3 className="text-lg font-medium">{product.name}</h3>
                 <div className="flex justify-between items-center mt-2">
@@ -129,7 +130,7 @@ const Shop = () => {
           </div>
 
           {/* Pagination */}
-          <div className="flex justify-center mt-10 space-x-2">
+          <div className="flex flex-wrap justify-center mt-10 space-x-2">
             <button className="px-4 py-2 bg-gray-200 text-[#FF9900] border border-[#FF9900] rounded">
               «
             </button>
